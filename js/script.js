@@ -10,9 +10,11 @@ const getRandomDiceRoll = function(sides=6) {
 //console.log(getRandomDiceRoll())
 
 // 1) Call getRandomDiceRoll() and store the result as a variable named "diceRoll"
-const diceRoll = getRandomDiceRoll();
+let diceRoll = getRandomDiceRoll();
+const rolledDice = `You rolled: ${diceRoll}`;
 
-console.log(`You rolled ${diceRoll}`);
+
+document.querySelector(`h2`).textContent = rolledDice;
 // 2) Update user interface (document), showing the diceface (svg image) that matches the roll number
 
 // 3) Use `diceRoll` to update the label "You rolled: #" (replacing # with the roll)
