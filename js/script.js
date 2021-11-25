@@ -31,3 +31,5 @@ const rollTheDice = function() {
   document.querySelector(`img`).src = `../img/dice${diceRoll}.svg`;
 }
 
+const rollButton = document.querySelector(`button`);
+rollButton.addEventListener(`click`, rollTheDice);
