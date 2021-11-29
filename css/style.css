@@ -1,4 +1,25 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
 }
-
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3em;
+}
+img {
+    max-height: 25em; 
+    max-width: 25em;
+    display: block; 
+    background-color: white;
+    padding: 1em;
+    margin-top: 2em;
+}
+h2 {
+    text-align: center;
+}
+button {
+    width: 100%;
+}
