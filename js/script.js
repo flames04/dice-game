@@ -21,14 +21,19 @@ const getRandomDiceRoll = function(sides=6) {
 
 const rollTheDice = function() {
   //step 1)
-  let diceRoll = getRandomDiceRoll(); //generates random number
+  let diceRollOne = getRandomDiceRoll(); //generates random number
+  let diceRollTwo = getRandomDiceRoll (); //second dice
+
+  let diceRoll = (diceRollOne + diceRollTwo);
+
 
   //step 3)
   const rolledDice = `You rolled: ${diceRoll}`;
   document.querySelector(`h2`).textContent = rolledDice; //shows the random number in content and updates text
 
   //step 2)
-  document.querySelector(`img`).src = `../img/dice${diceRoll}.svg`;
+  document.querySelector(`.one`).src = `../img/dice${diceRollOne}.svg`;
+  document.querySelector(`.two`).src = `../img/dice${diceRollTwo}.svg`;
 }
 
 const rollButton = document.querySelector(`button`);
