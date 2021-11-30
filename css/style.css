@@ -5,10 +5,8 @@ body{
 }
 div {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 3em;
 }
 img {
     max-height: 25em; 
