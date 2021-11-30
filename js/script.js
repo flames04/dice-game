@@ -18,6 +18,7 @@ const getRandomDiceRoll = function(sides=6) {
 // 3) Use `diceRoll` to update the label "You rolled: #" (replacing # with the roll)
 
 // 4) Wrap the dice roll procedure in a function named rollTheDice(), call it from the console to test
+let lastRoll = 0;
 
 const rollTheDice = function() {
   //step 1)
@@ -26,7 +27,12 @@ const rollTheDice = function() {
 
   let diceRoll = (diceRollOne + diceRollTwo);
 
-
+  if (diceRoll === lastRoll) {
+    console.log(`You rolled: ${diceRoll} again`);
+  } else {
+    console.log(`Not the same`);
+  }
+  lastRoll = diceRoll;
   //step 3)
   const rolledDice = `You rolled: ${diceRoll}`;
   document.querySelector(`h2`).textContent = rolledDice; //shows the random number in content and updates text
@@ -34,6 +40,9 @@ const rollTheDice = function() {
   //step 2)
   document.querySelector(`.one`).src = `../img/dice${diceRollOne}.svg`;
   document.querySelector(`.two`).src = `../img/dice${diceRollTwo}.svg`;
+
+  return diceRoll;
+
 }
 
 const rollButton = document.querySelector(`button`);
