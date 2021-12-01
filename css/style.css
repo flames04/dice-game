@@ -9,8 +9,8 @@ div {
     align-items: center;
 }
 img {
-    border-radius: 0.25em;
-    max-width: 10rem;
+    max-height: 25em; 
+    max-width: 25em;
     display: block; 
     background-color: white;
     padding: 1em;
