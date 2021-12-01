@@ -5,16 +5,15 @@ body{
 }
 div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 img {
-    max-height: 25em; 
-    max-width: 25em;
+    border-radius: 0.25em;
+    max-width: 10rem;
     display: block; 
     background-color: white;
     padding: 1em;
-    margin-top: 2em;
     border: 0.25em solid black;
 }
 h2 {
