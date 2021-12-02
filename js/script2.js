@@ -10,3 +10,9 @@ if (diceSum === 2){
   } else if (diceSum === 4 && diceRollOne != 2){
     diceMessage = `Easy Four`
   }
+
+
+  module.exports = {
+    diceMessage,
+    diceSum
+};

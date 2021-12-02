@@ -38,7 +38,23 @@ const rollTheDice = function() {
     diceMessage = `Ace Deuce`
   } else if (diceSum === 4 && diceRollOne === 2){
     diceMessage = `Hard Four`
-  }
+  } else if (diceSum === 4 && diceRollOne != 2){
+    diceMessage = `EasyFour`
+  } else if (diceSum === 5){
+    diceMessage = `Five(Fever Five)`
+  } else if (diceSum === 6 && diceRollOne === 3){
+    diceMessage = `Hard Six`
+  } else if (diceSum === 6 && diceRollOne != 3){
+    diceMessage = `Easy Six`
+  } else if (diceSum === 7){
+    diceMessage = `Natural or Seven Out`
+  } else if (diceSum === 8 && diceRollOne === 4){
+    diceMessage = `Hard Eight`
+  } else if (diceSum === 8 && diceRollOne != 4){
+    diceMessage = `Easy Eight`
+  } else if (diceSum === 9){
+    diceMessage = `Nine(Nina)`
+  } else if 
 
 
 
