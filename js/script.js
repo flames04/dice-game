@@ -23,26 +23,31 @@ let lastRoll = 0;
 
 const rollTheDice = function() {
   //step 1)
+  
   let diceRollOne = getRandomDiceRoll(); //generates random number
-  //let diceRollTwo = getRandomDiceRoll (); //second dice
+  let diceRollTwo = getRandomDiceRoll (); //second dice
+  let diceMessage = `three`
 
-  let diceRoll = (diceRollOne + diceRollTwo);
-  
-  if (diceRoll === 2){
-    rolledDice = `Snake Eyes`;
-  } else if (diceRoll ===)
-  
+  let diceSum = diceRollOne + diceRollTwo;
+
+
+
+  if (diceSum === 2){
+    diceMessage = `Snake Eyes`
+  } else if (diceSum === 3){
+    diceMessage = `Ace Deuce`
+  } else if (diceSum === 4 && diceRollOne === 2){
+    diceMessage = `Hard Four`
+  }
+
+
+
 
 
   //step 3)
-  const rolledDice = `You rolled: ${diceRoll}`;
-  document.querySelector(`h2`).textContent = rolledDice; //shows the random number in content and updates text
+  const rolledDice = `You rolled: ${diceMessage}`;
+  document.querySelector(`h2`).textContent = rolledDice;
 
-  //condition for rolling same number consecutively
-  if (diceRoll === lastRoll) {
-    rolledDice = `You rolled: ${diceRoll} again!`;
-  };
-  
   //step 2)
   document.querySelector(`.one`).src = `../img/dice${diceRollOne}.svg`;
   document.querySelector(`.two`).src = `../img/dice${diceRollTwo}.svg`;
